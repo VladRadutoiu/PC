@@ -1,0 +1,18 @@
+Pentru realizarea temei am folosit laboratorul 10 in care am adaugat biblioteca
+parson. Tema contine un while(1) in care sunt preluate comenzile de la stdin. 
+in cazul comenzii exit programul se incdhide. Pentru comanda register se afiseaza
+2 prompturi username si password si se citeste pentru fiecare de la stdin. Se 
+formeaza un obiect json si se foloseste functie compute_post_request pentru a
+crea mesajul apoi se trimite serverului. Pentru cazul login se verifica sa gie
+deja un user logat apoi se creeaza prompturi, se citeste de la stdin si se
+trimite mesajul. Pentru enter_lbrary se creeaza un mesaj get_request in care
+sunt introduse cookiurile din mesajul de la server in cazul unui login bun. 
+In continuare se extrage tokenul primit de la server si se pastreaza. Pentru 
+get_books se trimite un mesaj serverului cu tokenul salvat si se afiseaza raspunsul. 
+(Uneori se primeste tokenul prost si nu am reusit sa imi dau seama de ce asa ca
+trebuie introdus din nou enter_library pana merge :( )
+Pentru get_book se introduce un prompt pt id unde se citeste de la stdin apoi 
+se trimite mesaj serverului pentru afisare. La fel pentru delete_book se creeaza
+prompt pt id si se trimite mesaj serverului. Pentru add_book se creeaza prompt
+pentru titlu, autor, categorie, nr de pagini si editor, si se citeste de la
+stdin apoi se trimite mesajul serverului.

@@ -1,0 +1,11 @@
+In implementarea temei m-am folosit de conceptele explicate la laborator si 
+multa cautare pe internet. Pentru rezolvarea protocolului arp am folosit 2 cazuri.
+Primul cand pachetul era arp request si deoarece aveam doar un host pentru fiecare
+interfata am raspuns la fiecare request cu un reply fara a mai face alte verificari.
+La partea de reply mi-am updatat tabela arp si am trimis mai departe primul
+pachet din coada la destinatia ether_shost al pachetului arp reply.
+Pentru partea de icmp am verificat ttl <=1 si host unreachable si
+am trimis mesajele corespunzatoare daca era vreunul dintre cazuri.
+Daca apoi tabela de rutare nu avea intrare corespunzatoare pentru adresa ip
+am bagat mesajul in coada si am trimis arp request pe interfata din tabela de rutare
+alfel am trimis pachetul pe destinatia din tabela de rutare.

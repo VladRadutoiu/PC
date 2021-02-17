@@ -1,0 +1,10 @@
+Clientul functioneaza cu comenzile exit, subscribe
+(nume topic) SF(0 sau 1) sau unsubscribe (nume_topic). Daca primeste comenzile
+ cu spatii in plus va primi segmentation fault. Daca comanda nu este scrisa bine
+va afisa un mesaj de eroare. Clientul primeste mesajele de la server si le afise
+aza. Serverul are rolul de a trimite mesajele udp catre clientii potriviti.
+Clientii nu pot da unsubscribe la ceva la care nu sunt abonati sau de la un 
+topic inexistent. Clientii si topicurile sunt memorate cu liste dublu inlantuite.
+Pentru SF am folosit tot o lista dublu inlantuita pentru a retine mesajele 
+pentru cei abonati dar deconectati.
+
